@@ -1,8 +1,10 @@
-import React from "react";
-import MenuItem from "./MenuItem";
+
+
 import { AiFillHome } from "react-icons/ai";
 import { HiInformationCircle } from "react-icons/hi";
 import Link from "next/link";
+import DarkModeSwitch from "./DarkModeSwitch";
+import MenuItem from "./MenuItem";
 
 function Header() {
   return (
@@ -12,7 +14,8 @@ function Header() {
         <MenuItem title="ABOUT" address="/about" Icon={HiInformationCircle} />
       </div>
 
-      <div className="">
+      <div className="flex items-center space-x-5">
+        <DarkModeSwitch />
         <Link href="/">
           <h2>
             <span className="font-bold bg-amber-500 py-1 px-2 rounded-lg">Flicks</span>
